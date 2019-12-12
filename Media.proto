@@ -40,7 +40,7 @@ message MediaResponse {
     }
 
     message ImageQuality {
-        string profile  = 1;
+        string  profile = 1;
         fixed32 width   = 2;
         fixed32 height  = 3;
     }
