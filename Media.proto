@@ -36,8 +36,9 @@ message MediaResponse {
     }
 
     message Stream {
-        string        uri     = 1;
-        StreamQuality quality = 2;
+        string        uri       = 1;
+        StreamQuality quality   = 2;
+        string        mime_type = 3;
     }
 
     message ImageQuality {
