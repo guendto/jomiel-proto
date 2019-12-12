@@ -27,9 +27,9 @@ message MediaResponse {
     }
 
     message StreamQuality {
-        string   profile = 1;
-        sfixed32 width   = 2;
-        sfixed32 height  = 3;
+        string  profile = 1;
+        fixed32 width   = 2;
+        fixed32 height  = 3;
     }
 
     message Stream {
@@ -39,8 +39,8 @@ message MediaResponse {
 
     message ImageQuality {
         string profile  = 1;
-        sfixed32 width  = 2;
-        sfixed32 height = 3;
+        fixed32 width   = 2;
+        fixed32 height  = 3;
     }
 
     message Image {
