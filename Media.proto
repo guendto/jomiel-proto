@@ -32,6 +32,7 @@ message MediaResponse {
         string  profile = 1;
         fixed32 width   = 2;
         fixed32 height  = 3;
+        fixed32 bitrate = 4;
     }
 
     message Stream {
