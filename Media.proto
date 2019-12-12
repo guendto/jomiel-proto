@@ -23,7 +23,9 @@ message MediaInquiry {
 message MediaResponse {
 
     message Thumbnail {
-        string uri = 1;
+        string  uri    = 1;
+        fixed32 width  = 2;
+        fixed32 height = 3;
     }
 
     message StreamQuality {
