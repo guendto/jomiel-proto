@@ -52,11 +52,12 @@ message MediaResponse {
         Thumbnail    thumbnail = 4;
     }
 
-    string             title      = 1;
-    string             identifier = 2;
-    repeated Thumbnail thumbnail  = 3;
-    repeated Stream    stream     = 4;
-    repeated Image     image      = 5;
+    string             title       = 1;
+    string             description = 2;
+    string             identifier  = 3;
+    repeated Thumbnail thumbnail   = 4;
+    repeated Stream    stream      = 5;
+    repeated Image     image       = 6;
 }
 
 // vim: set ts=4 sw=4 tw=72 expandtab:
