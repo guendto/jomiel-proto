@@ -54,6 +54,11 @@ message MediaResponse {
         Thumbnail    thumbnail = 4;
     }
 
+    message Statistics {
+      float average_rating = 1;
+      fixed64 view_count   = 2;
+    }
+
     string             title          = 1;
     string             description    = 2;
     string             identifier     = 3;
@@ -61,6 +66,7 @@ message MediaResponse {
     repeated Stream    stream         = 5;
     repeated Image     image          = 6;
     fixed32            length_seconds = 7;
+    Statistics         statistics     = 8;
 }
 
 // vim: set ts=4 sw=4 tw=72 expandtab:
