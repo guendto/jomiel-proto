@@ -27,15 +27,15 @@ import "jomiel/protobuf/v1alpha1/status.proto";
 
 message Inquiry {
     oneof inquiry {
-        jomiel.media.MediaInquiry media = 1;
+        jomiel.protobuf.v1alpha1.MediaInquiry media = 1;
     }
 }
 
 message Response {
     oneof response {
-        jomiel.media.MediaResponse media = 1;
+        jomiel.protobuf.v1alpha1.MediaResponse media = 1;
     }
-    jomiel.status.ResponseStatus status = 2;
+    jomiel.protobuf.v1alpha1.ResponseStatus status = 2;
 }
 
 // vim: set ts=4 sw=4 tw=72 expandtab:
