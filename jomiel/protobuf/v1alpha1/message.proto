@@ -12,8 +12,6 @@
 
 syntax = "proto3";
 
-option go_package = "proto";
-
 package jomiel.protobuf.v1alpha1;
 
 option java_package = "io.github.jomiel.protobuf.v1alpha1";
