@@ -14,7 +14,7 @@ syntax = "proto3";
 
 option go_package = "proto";
 
-package jomiel;
+package jomiel.protobuf.v1alpha1;
 
 import "jomiel/protobuf/v1alpha1/media.proto";
 import "jomiel/protobuf/v1alpha1/status.proto";
