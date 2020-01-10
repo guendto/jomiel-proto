@@ -52,8 +52,8 @@ message ResponseStatus {
         sfixed32 code = 1 /* [default = 200] */;
     }
 
-    StatusCode  code        = 1; /* [default = OK] */
-    ErrorCode   error       = 2; /* [default = NoError] */
+    StatusCode  code        = 1; /* [default = STATUS_CODE_OK] */
+    ErrorCode   error       = 2; /* [default = ERROR_CODE_UNSPECIFIED] */
     Http        http        = 3;
     string      message     = 4; /* [default = "Not an error"] */
 }
@@ -63,33 +63,33 @@ message ResponseStatus {
  * --------
  *
  * Case: No error occurred
- *  status code: OK
- *   error code: NoError
+ *  status code: STATUS_CODE_OK
+ *   error code: ERROR_CODE_UNSPECIFIED
  *    http code: 200 (OK)
  *
  * Case: No matching media parser for the given URI
- *  status code: NotImplemented
- *   error code: NoParserError
+ *  status code: STATUS_CODE_NOT_IMPLEMENTED
+ *   error code: ERROR_CODE_NO_PARSER
  *    http code: 200 (OK)
  *
  * Case: Parsing failed for the contents of the given URI
- *  status code: InternalServer
- *   error code: ParseError
+ *  status code: STATUS_CODE_INTERNAL_SERVER
+ *   error code: ERROR_CODE_PARSE
  *    http code: 200 (OK)
  *
  * Case: Invalid input URI given
- *  status code: BadRequest
- *   error code: InvalidInputError
+ *  status code: STATUS_CODE_BAD_REQUEST
+ *   error code: ERROR_CODE_INVALID_INPUT
  *    http code: 200 (OK)
  *
  * Case: HTTP connection failure
- *  status code: InternalServer
- *   error code: HttpError
+ *  status code: STATUS_CODE_INTERNAL_SERVER
+ *   error code: ERROR_CODE_HTTP
  *    http code: 404 (Not found)
  *
  * Case: Unspecified or otherwise unknown error occurred
- *  status code: InternalServer
- *   error code: UnknownError
+ *  status code: STATUS_CODE_INTERNAL_SERVER
+ *   error code: ERROR_CODE_UNKNOWN_SEE_MESSAGE
  *    http code: 200 (OK)
  *
  */
