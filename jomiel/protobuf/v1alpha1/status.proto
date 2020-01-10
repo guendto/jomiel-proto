@@ -25,16 +25,16 @@ option php_namespace = "Jomiel\\ProtoBuf\\V1alpha1";
  */
 
 enum StatusCode {
-    Undefined               = 0;
-    OK                      = 200;
-    // The client seems to have erred
-    BadRequest              = 400;
-    Unauthorized            = 401;
-    Forbidden               = 403;
-    NotFound                = 404;
-    // The service failed to fulfill an apparently valid request
-    InternalServer          = 500;
-    NotImplemented          = 501;
+    STATUS_CODE_UNDEFINED               = 0;
+    STATUS_CODE_OK                      = 200;
+    // The client seems to have erred.
+    STATUS_CODE_BAD_REQUEST             = 400;
+    STATUS_CODE_UNAUTHORIZED            = 401;
+    STATUS_CODE_FORBIDDEN               = 403;
+    STATUS_CODE_NOT_FOUND               = 404;
+    // The service failed to fulfill an apparently valid request.
+    STATUS_CODE_INTERNAL_SERVER         = 500;
+    STATUS_CODE_NOT_IMPLEMENTED         = 501;
 }
 
 enum ErrorCode {
