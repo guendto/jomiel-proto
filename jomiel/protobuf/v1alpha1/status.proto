@@ -25,7 +25,7 @@ option php_namespace = "Jomiel\\ProtoBuf\\V1alpha1";
  */
 
 enum StatusCode {
-    STATUS_CODE_UNDEFINED               = 0;
+    STATUS_CODE_UNSPECIFIED             = 0;
     STATUS_CODE_OK                      = 200;
     // The client seems to have erred.
     STATUS_CODE_BAD_REQUEST             = 400;
