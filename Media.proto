@@ -28,27 +28,25 @@ message MediaResponse {
         fixed32 height = 3;
     }
 
-    message StreamQuality {
-        string  profile = 1;
-        fixed32 width   = 2;
-        fixed32 height  = 3;
-        fixed32 bitrate = 4;
-    }
-
     message Stream {
+        message StreamQuality {
+            string  profile = 1;
+            fixed32 width   = 2;
+            fixed32 height  = 3;
+            fixed32 bitrate = 4;
+        }
         string        uri            = 1;
         StreamQuality quality        = 2;
         string        mime_type      = 3;
         fixed64       content_length = 4;
     }
 
-    message ImageQuality {
-        string  profile = 1;
-        fixed32 width   = 2;
-        fixed32 height  = 3;
-    }
-
     message Image {
+        message ImageQuality {
+            string  profile = 1;
+            fixed32 width   = 2;
+            fixed32 height  = 3;
+        }
         string       title     = 1;
         string       uri       = 2;
         ImageQuality quality   = 3;
