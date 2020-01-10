@@ -38,12 +38,12 @@ enum StatusCode {
 }
 
 enum ErrorCode {
-    NoError                 = 0;
-    NoParserError           = 500;
-    ParseError              = 501;
-    InvalidInputError       = 502;
-    HttpError               = 505;
-    UnknownSeeMessageError  = 550;
+    ERROR_CODE_UNSPECIFIED          = 0;
+    ERROR_CODE_NO_PARSER            = 500;
+    ERROR_CODE_PARSE                = 501;
+    ERROR_CODE_INVALID_INPUT        = 502;
+    ERROR_CODE_HTTP                 = 505;
+    ERROR_CODE_UNKNOWN_SEE_MESSAGE  = 550;
 }
 
 message ResponseStatus {
