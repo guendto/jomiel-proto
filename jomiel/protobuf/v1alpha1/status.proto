@@ -12,9 +12,9 @@
 
 syntax = "proto3";
 
-option go_package = "proto";
+package jomiel.protobuf.v1alpha1;
 
-package jomiel.status;
+option go_package = "proto";
 
 /*
  * NOTE: See also "Examples" at the bottom of this file
