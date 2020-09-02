@@ -16,8 +16,8 @@ Installation from [PyPI] is not currently supported.
 
 Linted by [buf.build].
 
-[aplv2]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
 [protocol buffer]: https://developers.google.com/protocol-buffers/
+[aplv2]: https://www.tldrlegal.com/l/apache2
 [buf.build]: https://github.com/bufbuild/buf
 [jomiel]: https://github.com/guendto/jomiel/
 [pypi]: https://pypi.org
