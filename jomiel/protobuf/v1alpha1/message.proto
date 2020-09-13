@@ -12,7 +12,7 @@
 
 syntax = "proto3";
 
-package jomiel.protobuf.v1alpha1;
+package jomiel_messages.protobuf.v1alpha1;
 
 option java_package = "io.github.jomiel.protobuf.v1alpha1";
 option java_outer_classname = "MessageProto";
@@ -21,20 +21,20 @@ option csharp_namespace = "Jomiel.ProtoBuf.V1Alpha1";
 option php_namespace = "Jomiel\\ProtoBuf\\V1alpha1";
 option go_package = "jomiel/protobuf/v1alpha1";
 
-import "jomiel/protobuf/v1alpha1/media.proto";
-import "jomiel/protobuf/v1alpha1/status.proto";
+import "jomiel_messages/protobuf/v1alpha1/media.proto";
+import "jomiel_messages/protobuf/v1alpha1/status.proto";
 
 message Inquiry {
     oneof inquiry {
-        jomiel.protobuf.v1alpha1.MediaInquiry media = 1;
+        jomiel_messages.protobuf.v1alpha1.MediaInquiry media = 1;
     }
 }
 
 message Response {
     oneof response {
-        jomiel.protobuf.v1alpha1.MediaResponse media = 1;
+        jomiel_messages.protobuf.v1alpha1.MediaResponse media = 1;
     }
-    jomiel.protobuf.v1alpha1.ResponseStatus status = 2;
+    jomiel_messages.protobuf.v1alpha1.ResponseStatus status = 2;
 }
 
 // vim: set ts=4 sw=4 tw=72 expandtab:
