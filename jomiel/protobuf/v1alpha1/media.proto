@@ -12,7 +12,7 @@
 
 syntax = "proto3";
 
-package jomiel.protobuf.v1alpha1;
+package jomiel_messages.protobuf.v1alpha1;
 
 option java_package = "io.github.jomiel.protobuf.v1alpha1";
 option java_outer_classname = "MediaProto";
