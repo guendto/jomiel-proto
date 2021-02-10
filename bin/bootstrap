@@ -25,6 +25,9 @@
 #   - When lang ID is set to 'c', the script will call protoc-c(1),
 #   instead of protoc(1)
 #
+#   - When lang ID is set to 'go', the script will append ~/go/bin to
+#   the PATH.
+#
 #   - This script will not validate lang ID, the value is simply passed
 #   as such to protoc(1)
 #
@@ -121,6 +124,10 @@ shift $((OPTIND-1)) # Shift off the options and optional --
         echo "protoc-c: command not found"
         exit 1
     }
+}
+
+[ "$LANGID" = "go" ] && {
+  PATH=$PATH:~/go/bin
 }
 
 [ -d "$DESTDIR" ] || mkdir -p "$DESTDIR"
