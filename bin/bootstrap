@@ -12,9 +12,7 @@
 
 # bootstrap
 #
-# A simple script to compile the protobuf declarations for jomiel
-# messages. This script is intended to be used with the jomiel
-# (sub)project(s).
+# Make protobuf declaration compilation (a bit) easier.
 #
 # Notes:
 #   - This is a bash script (namely the globstar dependency)
@@ -22,14 +20,12 @@
 #   - Make sure you have installed the protobuf-compiler (protoc) and it
 #   can be found the path.
 #
-#   - When lang ID is set to 'c', the script will call protoc-c(1),
-#   instead of protoc(1)
+#   - When the langid is set to:
+#       - 'c', the script will call proto-c(1) instead of protoc(1)
+#       - 'go', the script will append "~/go/bin" to the PATH
 #
-#   - When lang ID is set to 'go', the script will append ~/go/bin to
-#   the PATH.
-#
-#   - This script will not validate lang ID, the value is simply passed
-#   as such to protoc(1)
+#   - The langid value will not be validated, the value passed as such
+#   to the protobuf compiler
 #
 # Examples:
 #   bootstrap -p jomiel-proto/ -l python -d bindings/
