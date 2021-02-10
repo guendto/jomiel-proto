@@ -9,6 +9,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+set -e
 
 # bootstrap
 #
@@ -34,7 +35,6 @@
 #   bootstrap -p jomiel-proto/ -l c -d bindings/
 #       # Same as above, but for C language.
 #
-set -e
 
 # Enable bash globstar for recursive search ("**/*.proto").
 #
