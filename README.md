@@ -13,7 +13,7 @@ communicate with [jomiel].
 The `./bin/bootstrap` is a [Bash] script for compiling the [Protocol
 Buffer] declarations for the target language. It is a mere wrapper
 script that calls `protoc` (and `protoc-c`). Many of the examples of
-[jomiel-examples] use this script.
+[jomiel-client-demos] use this script.
 
 ```text
 Usage: bootstrap [-p <protodir>] [-l <langid>] [-d <destdir>]
@@ -40,8 +40,8 @@ Where
 Or, alternatively, call `protoc` (or `protoc-c`) directly to compile the
 declarations for the target language.
 
+[jomiel-client-demos]: https://github.com/guendto/jomiel-client-demos
 [protocol buffer]: https://developers.google.com/protocol-buffers/
-[jomiel-examples]: https://github.com/guendto/jomiel-examples
 [jomiel]: https://github.com/guendto/jomiel/
 [bash]: https://www.gnu.org/software/bash/
 
