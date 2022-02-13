@@ -63,10 +63,6 @@ __find_command()
 [ -z "$PROTOC" ] && {
     PROTOC="$(__find_command protoc)"
 }
-[ -x "$PROTOC" ] || {
-    echo "$PROTOC: file does not exist or execute permission is not granted"
-    exit 1
-}
 
 # Save generated files to this directory.
 #
@@ -80,9 +76,17 @@ PROTODIR=
 #
 LANGID=
 
+__is_protoc_executable()
+{
+    [ -x "$PROTOC" ] || {
+        >&2 echo "$PROTOC: file does not exist or execute permission is not granted"
+        exit 1
+    }
+}
 
 compile_files()
 {
+    __is_protoc_executable
     echo -n "Compiling the protobuf declarations for jomiel messages"
     for f in $PROTODIR/**/*.proto; do
         $PROTOC -I$PROTODIR --"$LANGID"_out=$DESTDIR $f || exit $?
