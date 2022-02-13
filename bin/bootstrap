@@ -48,14 +48,20 @@ EOF
     return 1
 }
 
+__find_command()
+{
+    result="$(command -v $1)"
+    [ -z "$result" ] && {
+        >&2 echo "error: $1: not found"
+        return 1
+    }
+    echo $result
+}
+
 # Protobuffer compiler
 #
 [ -z "$PROTOC" ] && {
-    PROTOC=`which protoc`
-    [ -z "$PROTOC" ] && {
-        echo "protoc: command not found"
-        exit 1
-    }
+    PROTOC="$(__find_command protoc)"
 }
 [ -x "$PROTOC" ] || {
     echo "$PROTOC: file does not exist or execute permission is not granted"
@@ -102,10 +108,11 @@ shift $((OPTIND-1)) # Shift off the options and optional --
 [ -z "$LANGID" ] && __help "-l <langid> not specified"
 
 [ "$LANGID" = "c" ] && {
-    PROTOC=`which protoc-c`
+    [ -n "$PROTOC_C" ] && {
+       PROTOC=$PROTOC_C
+    }
     [ -z "$PROTOC" ] && {
-        echo "protoc-c: command not found"
-        exit 1
+        PROTOC="$(__find_command protoc-c)"
     }
 }
 
