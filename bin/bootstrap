@@ -13,9 +13,9 @@
 # bootstrap
 # - Simple protobuf declaration compilation
 
-# Enable bash globstar for recursive search ("**/*.proto").
-#
-shopt -s globstar
+set -e  # exit immediate if a command exists with a non-zero status
+shopt -s globstar  # enable bash globstar for recursive search
+
 
 # Protobuffer compiler
 #
