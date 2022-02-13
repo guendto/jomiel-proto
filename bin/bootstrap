@@ -84,7 +84,7 @@ __is_protoc_executable()
     }
 }
 
-compile_files()
+__compile_files()
 {
     __is_protoc_executable
     echo -n "Compiling the protobuf declarations for jomiel messages"
@@ -125,7 +125,7 @@ shift $((OPTIND-1)) # Shift off the options and optional --
 }
 
 [ -d "$DESTDIR" ] || mkdir -p "$DESTDIR"
-compile_files
+__compile_files
 
 exit $?
 
